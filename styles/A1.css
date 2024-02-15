@@ -1,0 +1,44 @@
+
+  
+  /* Styles */
+  .card-container {
+    margin: 10px;
+    display: grid;
+    grid-gap: 20px;
+  }
+  .card {
+    box-sizing: border-box;
+  }
+  /* Mobile */
+  @media only screen and (max-width: 768px) {
+    .card-container {
+      grid-template-columns: 1fr;
+    }
+    .card {
+      width: calc(100% - 20px);
+      margin: 10px;
+    }
+  }  
+  /* Tablet */
+  @media only screen and (min-width: 768px) {
+    .card-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .card {
+      width: calc(50% - 20px);
+      margin-bottom: 20px;
+    }
+    .card:last-child {
+      width: calc(100% - 20px);
+    }
+  }
+  
+  /* Desktop */
+  @media only screen and (min-width: 1200px) {
+    .card-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .card {
+      width: calc(33.33% - 20px); 
+    }
+}
